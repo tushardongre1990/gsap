@@ -3,16 +3,15 @@ function breakTheText() {
   const h1Text = h1.textContent;
 
   const splittedText = h1Text.split("");
-  const halfValue = splittedText.length / 2;
-  console.log(halfValue);
 
   let clutter = "";
 
   splittedText.map((element, index) => {
     console.log(element, index);
 
-    const className = index < halfValue ? "even" : "odd";
-    clutter += `<span class="${className}">${element}</span>`;
+    const className = index % 2 === 0 ? "even" : "odd";
+    const charToDisplay = element === " " ? "&nbsp;" : element;
+    clutter += `<span class="${className}">${charToDisplay}</span>`;
   });
 
   h1.innerHTML = clutter;
