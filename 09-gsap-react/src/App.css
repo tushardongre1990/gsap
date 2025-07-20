@@ -4,6 +4,7 @@ main {
   background-color: #111;
   padding: 20px;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: space-evenly;
   /* overflow: hidden; */
@@ -31,4 +32,18 @@ main {
   border-radius: 50%;
   background: linear-gradient(to right bottom, lightgreen, lightblue);
   margin: 10px;
+}
+
+button {
+  padding: 20px 100px;
+  border-radius: 50px;
+  background: linear-gradient(lightseagreen, lightgreen);
+  color: #111;
+  font-size: 25px;
+  font-weight: 600;
+  border: none;
+}
+
+button:active {
+  scale: 0.96;
 }
